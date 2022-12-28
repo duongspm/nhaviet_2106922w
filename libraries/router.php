@@ -100,17 +100,24 @@
 	/* Tối ưu link */
 	$requick = array(
 		/* Sản phẩm */
-		array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
 		array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
+		array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
 		array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
+		array("tbl" => "product_item", "field" => "idi", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
+		
+		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "ve-chung-toi", "type" => "ve-chung-toi", "menu" => true),
 
-		/* Video */
-		array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
+		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "du-an", "type" => "du-an", "menu" => true),
+		array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "du-an", "type" => "du-an"),
+		
+		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
+
+		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "bao-gia", "type" => "bao-gia", "menu" => true),
+
+		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tu-van", "type" => "tu-van", "menu" => true),
 
 		/* Tin tức */
 		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
-
-		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "du-an", "type" => "du-an", "menu" => true),
 
 		/* gioi thieu */
 		array("tbl" => "static", "field" => "id", "source" => "static", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
@@ -162,7 +169,15 @@
 			$seo->set('type','article');
 			$titleMain = gioithieu;
 			break;
-
+			
+		case 've-chung-toi':
+			$source = "news";
+			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+			$seo->set('type',isset($_GET['id']) ? "article" : "object");
+			$type = $com;
+			$titleMain = "Về chúng tôi";
+			break;
+			
 		case 'tin-tuc':
 			$source = "news";
 			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
@@ -170,13 +185,37 @@
 			$type = $com;
 			$titleMain = tintuc;
 			break;
-
+			
 		case 'du-an':
 			$source = "news";
 			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
 			$seo->set('type',isset($_GET['id']) ? "article" : "object");
 			$type = $com;
 			$titleMain = "Dự án";
+			break;
+			
+		case 'dich-vu':
+			$source = "news";
+			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+			$seo->set('type',isset($_GET['id']) ? "article" : "object");
+			$type = $com;
+			$titleMain = "Dịch vụ";
+			break;
+			
+		case 'bao-gia':
+			$source = "news";
+			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+			$seo->set('type',isset($_GET['id']) ? "article" : "object");
+			$type = $com;
+			$titleMain = "Báo giá";
+			break;
+			
+		case 'tu-van':
+			$source = "news";
+			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+			$seo->set('type',isset($_GET['id']) ? "article" : "object");
+			$type = $com;
+			$titleMain = "Tư vấn";
 			break;
 
 		case 'san-pham':
@@ -187,27 +226,12 @@
 			$titleMain = sanpham;
 			break;
 			
-		case 'thu-vien-anh':
-			$source = "product";
-			$template = isset($_GET['id']) ? "album/album_detail" : "album/album";
-			$seo->set('type',isset($_GET['id']) ? "article" : "object");
-			$type = $com;
-			$titleMain = 'Hình ảnh';
-			break;
 			
 		case 'tim-kiem':
 			$source = "search";
 			$template = "product/product";
 			$seo->set('type','object');
 			$titleMain = timkiem;
-			break;
-
-		case 'video':
-			$source = "video";
-			$template = "video/video";
-			$type = $com;
-			$seo->set('type','object');
-			$titleMain = "Video";
 			break;
 
 		case 'ngon-ngu':

@@ -18,12 +18,12 @@
 		'arrayDomainSSL' => array(),
 		'database' => array(
 			'server-name' => $_SERVER["SERVER_NAME"],
-			'url' => '/2022/source_company/12/lekimhong_1308322w/', // Thay
+			'url' => '/2022/source_company/12/nhaviet_2106922w/', // Thay
 			'type' => 'mysql',
 			'host' => 'localhost',
 			'username' => 'root',
 			'password' => '',
-			'dbname' => '2022-12_lekimhong_1308322w',//Thay
+			'dbname' => '2022-12_nhaviet_2106922w',//Thay
 			'port' => 3306,
 			'prefix' => 'table_',
 			'charset' => 'utf8mb4'
