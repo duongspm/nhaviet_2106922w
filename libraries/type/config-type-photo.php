@@ -43,7 +43,7 @@
     $config['photo']['man_photo'][$nametype]['link_photo'] = true;
     $config['photo']['man_photo'][$nametype]['name_photo'] = true;
     $config['photo']['man_photo'][$nametype]['width_photo'] = 1366;
-    $config['photo']['man_photo'][$nametype]['height_photo'] = 617;
-    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '1366x617x1';
+    $config['photo']['man_photo'][$nametype]['height_photo'] = 615;
+    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '1366x615x1';
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
 ?>

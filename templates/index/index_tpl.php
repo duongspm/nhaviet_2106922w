@@ -1,17 +1,18 @@
 <?php if(!empty($about)){?>
-<div class="about">
+<div class="about pd">
     <div class="wrapper">
         <div class="aboutt">
             <div class="about__left">
-
-                <div class="scale-img about__left-img hover_xam">
-                    <?=$func->getImage(['class' => 'w-100', 'sizes' => '580x440x1', 'upload' => UPLOAD_NEWS_L, 'image' => $about['photo'], 'alt' => $about['name'.$lang]])?>
+                <div class="about__left-img">
+                    <div class="scale-img hover_xam">
+                        <?=$func->getImage(['class' => 'w-100', 'sizes' => '550x330x1', 'upload' => UPLOAD_NEWS_L, 'image' => $about['photo'], 'alt' => $about['name'.$lang]])?>
+                    </div>
                 </div>
             </div>
             <div class="about__right">
                 <div class="about__title">
                     <span>
-                        Welcome To!
+                        Chất lượng cốt lỗi của Nhà Việt
                     </span>
                 </div>
                 <div class="about__name">
@@ -19,6 +20,7 @@
                         <?=$about['name'.$lang]?>
                     </span>
                 </div>
+                <div class="about__line"></div>
                 <div class="about__desc">
                     <?=htmlspecialchars_decode($about['desc'.$lang])?>
                 </div>
@@ -31,6 +33,13 @@
 </div>
 <?php }?>
 <!-- -->
+<div class="tieuchi">
+    <div class="wrapper">
+        <div class="tieuchii">
+
+        </div>
+    </div>
+</div>
 <div class="producnb pd mr-top">
     <div class="wrapper">
         <div class="productnbb">

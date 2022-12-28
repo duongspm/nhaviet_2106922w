@@ -17,6 +17,6 @@
     $config['static'][$nametype]['content_cke'] = true;
     $config['static'][$nametype]['seo'] = true;
     $config['static'][$nametype]['width'] = 550;
-    $config['static'][$nametype]['height'] = 333;
+    $config['static'][$nametype]['height'] = 330;
     $config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 ?>
