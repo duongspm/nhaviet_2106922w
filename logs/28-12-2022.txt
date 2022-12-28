@@ -1,0 +1,5 @@
+::1()--query--tables(delete from table_user_online where time < 1672238614) (21:53:34 28/12/2022)
+::1(admin)--update--setting([["","id","=","1"]]) (21:54:17 28/12/2022)
+::1(admin)--query--tables(delete from table_seo where id_parent =  and com = 'setting' and act = 'update' and type = 'setting') (21:54:17 28/12/2022)
+::1(admin)--insert--seo(378) (21:54:17 28/12/2022)
+::1(admin)--query--tables(delete from table_user_online where time < 1672238689) (21:54:49 28/12/2022)

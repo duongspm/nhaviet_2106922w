@@ -5,11 +5,11 @@ $config['product'][$nametype]['title_main'] = "Sản phẩm";
 $config['product'][$nametype]['dropdown'] = true;
 $config['product'][$nametype]['list'] = true;
 $config['product'][$nametype]['cat'] = true;
+$config['product'][$nametype]['item'] = true;
+
 $config['product'][$nametype]['view'] = true;
 $config['product'][$nametype]['copy'] = true;
 $config['product'][$nametype]['regular_price'] = true;
-$config['product'][$nametype]['sale_price'] = true;
-$config['product'][$nametype]['discount'] = true;
 $config['product'][$nametype]['copy_image'] = true;
 $config['product'][$nametype]['slug'] = true;
 $config['product'][$nametype]['check'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
@@ -46,13 +46,15 @@ $config['product'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
  // /* (List) */
 $config['product'][$nametype]['title_main_list'] = "Sản phẩm cấp 1";
 $config['product'][$nametype]['slug_list'] = true;
-$config['product'][$nametype]['copy'] = true;
 $config['product'][$nametype]['check_list'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
 
 /* Sản phẩm (Cat) */
 $config['product'][$nametype]['title_main_cat'] = "Sản phẩm cấp 2";
 $config['product'][$nametype]['slug_cat'] = true;
-// Nếu không có nổi bật thì xóa "noibat" => "Nổi bật" 
 $config['product'][$nametype]['check_cat'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
 
+/* Sản phẩm (Item) */
+$config['product'][$nametype]['title_main_item'] = "Sản phẩm cấp 3";
+$config['product'][$nametype]['slug_item'] = true;
+$config['product'][$nametype]['check_item'] = array("hienthi" => "Hiển thị");
 ?>
