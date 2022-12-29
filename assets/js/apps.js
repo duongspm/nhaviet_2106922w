@@ -339,6 +339,18 @@ NN_FRAMEWORK.SlickBlog = function () {
 };
 
 /* Slick */
+NN_FRAMEWORK.SlickNews = function () {
+  $(".slick-news").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    vertical: true,
+    loop: true
+  });
+};
+
+/* Slick */
 NN_FRAMEWORK.SlickTieuchi = function () {
   $(".slick-tieuchi").slick({
     slidesToShow: 3,
@@ -864,6 +876,7 @@ $(document).ready(function () {
   NN_FRAMEWORK.SlickSanpham();
   NN_FRAMEWORK.SlickBlog();
   NN_FRAMEWORK.SlickTieuchi();
+  NN_FRAMEWORK.SlickNews();
   NN_FRAMEWORK.Wows();
   NN_FRAMEWORK.AltImg();
   NN_FRAMEWORK.GoTop();

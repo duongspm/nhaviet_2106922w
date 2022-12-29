@@ -28,9 +28,9 @@
     $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
     $config['photo']['man_photo'][$nametype]['link_photo'] = true;
     $config['photo']['man_photo'][$nametype]['name_photo'] = true;
-    $config['photo']['man_photo'][$nametype]['width_photo'] = 42;
-    $config['photo']['man_photo'][$nametype]['height_photo'] = 42;
-    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '42x42x1';
+    $config['photo']['man_photo'][$nametype]['width_photo'] = 25;
+    $config['photo']['man_photo'][$nametype]['height_photo'] = 25;
+    $config['photo']['man_photo'][$nametype]['thumb_photo'] = '25x25x1';
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
 
     /* Slideshow */

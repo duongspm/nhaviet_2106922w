@@ -125,6 +125,8 @@
 		/* Liên hệ */
 		array("tbl" => "", "field" => "id", "source" => "", "com" => "lien-he", "type" => "", "menu" => true),
 
+		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chinh-sach", "type" => "chinh-sach", "menu" => false),
+
 	);
 
 	/* Find data */
@@ -210,6 +212,14 @@
 			$titleMain = "Báo giá";
 			break;
 			
+		case 'chinh-sach':
+			$source = "news";
+			$template = isset($_GET['id']) ? "news/news_detail" : "";
+			$seo->set('type','article');
+			$type = $com;
+			$titleMain = null;
+			break;
+				
 		case 'tu-van':
 			$source = "news";
 			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";

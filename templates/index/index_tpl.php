@@ -57,7 +57,7 @@
         </div>
     </div>
 </div>
-<div class="congtrinh pd">
+<div class="congtrinh">
     <div class="wrapper">
         <div class="congtrinh__top">
             <div class="heading">
@@ -256,9 +256,9 @@
         </div>
     </div>
 </div>
-<div class="infor mr-top">
+<div class="infor">
     <div class="wrapper">
-        <div class="inforr pd">
+        <div class="inforr">
             <div class="infor__item">
                 <div class="infor__img">
                     <img src="assets/images/images/icon-phone2.png" alt="<?=$setting['name'.$lang]?>">
@@ -268,9 +268,22 @@
                         <?=$func->formatPhone($optsetting['hotline'])?></a>
                     <?php if(!empty($openingtime)){?>
                     <span class="infor--desc">
-                        <?=$openingtime['name'.$lang]?>
+                        <?=$openingtime['desc'.$lang]?>
                     </span>
                     <?php } ?>
+                </div>
+            </div>
+            <div class="infor__item">
+                <div class="infor__img">
+                    <img src="assets/images/images/email02.png" alt="<?=$setting['name'.$lang]?>">
+                </div>
+                <div class="infor__content">
+                    <span class="infor--title">
+                        <?=$optsetting['email']?>
+                    </span>
+                    <span class="infor--desc">
+                        Gửi thư cho chúng tội bất cứ lúc nào
+                    </span>
                 </div>
             </div>
             <div class="infor__item">
@@ -279,132 +292,12 @@
                 </div>
                 <div class="infor__content">
                     <span class="infor--title">
+                        <?=$optsetting['address']?>
+                    </span>
+                    <span class="infor--desc">Địa chỉ liên hệ</span>
 
-                    </span>
-                    <?php if(!empty($openingtime)){?>
-                    <span class="infor--desc">
-                        <!-- <?=$openingtime['name'.$lang]?> -->
-                    </span>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="infor__item">
-                <div class="infor__img">
-                    <img src="assets/images/images/icon-phone2.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
-                <div class="infor__content">
-                    <span class="infor--title">
-
-                    </span>
-                    <?php if(!empty($openingtime)){?>
-                    <span class="infor--desc">
-                        <!-- <?=$openingtime['name'.$lang]?> -->
-                    </span>
-                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="dangky pd">
-    <div class="wrapper">
-        <div class="dangkyy">
-            <div class="heading__top">
-                <span class="heading__title heading__title--black">Sign up for</span>
-                <span class="heading__name heading__name--black">Đăng ký nhận tin</span>
-            </div>
-            <div class="dangky__buttom">
-                <div class="dangky__left">
-                    <?php if(!empty($dkimg)){?>
-                    <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:30" data-sm-items="1:30"
-                        data-md-items="1:30" data-lg-items="1:30" data-xlg-items="1:30" data-rewind="1"
-                        data-autoplay="1" data-loop="1" data-lazyload="0" data-mousedrag="1" data-touchdrag="1"
-                        data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1"
-                        data-navtext="<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-left' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='5' y1='12' x2='9' y2='16' /><line x1='5' y1='12' x2='9' y2='8' /></svg>|<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-right' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='15' y1='16' x2='19' y2='12' /><line x1='15' y1='8' x2='19' y2='12' /></svg>"
-                        data-navcontainer=".control-brand">
-                        <?php foreach($dkimg as $k => $v) { ?>
-                        <div class="dangky__img scale-img effect10">
-                            <?= $func->getImage(['class' => 'w-100', 'sizes' => '590x390x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
-                        </div>
-                        <?php }?>
-                    </div>
-                    <?php }?>
-                </div>
-                <div class="dangky__right">
-                    <form class="validation-newsletter" novalidate method="post" action=""
-                        enctype="multipart/form-data">
-                        <div class="newsletter-input">
-                            <input type="text" class="form-controld text-sm" id="fullname-newsletter"
-                                name="dataNewsletter[fullname]" placeholder="Họ Và Tên: " required />
-                            <div class="invalid-tooltip">Vui lòng nhập Họ và Tên</div>
-                        </div>
-                        <div class="newsletter-input">
-                            <input type="number" class="form-controld text-sm" id="phone-newsletter"
-                                name="dataNewsletter[phone]" placeholder="Số Điện Thoại: " required />
-                            <div class="invalid-tooltip">Vui lòng nhập Số Điện Thoại</div>
-                        </div>
-                        <div class="newsletter-input">
-                            <input type="email" class="form-controld text-sm" id="email-newsletter"
-                                name="dataNewsletter[email]" placeholder="Email: " required />
-                            <div class="invalid-tooltip"><?= vuilongnhapdiachiemail ?></div>
-                        </div>
-                        <div class="newsletter-input">
-                            <input type="text" class="form-controld text-sm" id="content-newsletter"
-                                name="dataNewsletter[content]" placeholder="Nội Dung: " required />
-                            <div class="invalid-tooltip">Vui lòng nhập Nội dung</div>
-                        </div>
-                        <div class="newsletter-button">
-                            <input type="submit" class="dangky-btn" name="submit-newsletter" value="ĐĂNG KÝ NHẬN TIN"
-                                disabled>
-                            <input type="hidden" class="btn btn-sm btn-danger w-100"
-                                name="recaptcha_response_newsletter" id="recaptchaResponseNewsletter">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="video-fb pd">
-    <div class="wrapper">
-        <div class="heading__top">
-            <span class="heading__title heading__title--black">Social Network</span>
-            <span class="heading__name heading__name--black">fanpage - videos</span>
-        </div>
-        <div class="video-fb">
-            <div class="video__fb--left">
-                <div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="590"
-                    data-height="433" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
-                    data-show-facepile="true">
-                    <div class="fb-xfbml-parse-ignore">
-                        <blockquote cite="<?=$optsetting['fanpage']?>">
-                            <a href="<?=$optsetting['fanpage']?>">Facebook</a>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            <div class="video__fb--right">
-                <div class="videod-list">
-                    <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:30" data-sm-items="1:30"
-                        data-md-items="1:30" data-lg-items="1:30" data-xlg-items="1:30" data-rewind="1"
-                        data-autoplay="1" data-loop="1" data-lazyload="0" data-mousedrag="1" data-touchdrag="1"
-                        data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="1"
-                        data-navtext="<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-left' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='5' y1='12' x2='9' y2='16' /><line x1='5' y1='12' x2='9' y2='8' /></svg>|<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-right' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='15' y1='16' x2='19' y2='12' /><line x1='15' y1='8' x2='19' y2='12' /></svg>"
-                        data-navcontainer=".control-brand">
-                        <?php if(!empty($videoclip)) { foreach($videoclip as $k => $v) { ?>
-                        <div class="video-frame">
-                            <div class="video" data-fancybox="video" data-src="<?=$v['link_video']?>">
-                                <div class="video-image scale-img">
-                                    <?= $func->getImage(['class' => '', 'sizes' => '590x433x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php } }?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>div>
 </div>

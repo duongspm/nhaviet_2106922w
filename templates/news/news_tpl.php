@@ -5,7 +5,7 @@
         <div class="row">
             <a class="news-image col-sm-5" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
                 <span class="scale-img">
-                    <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '270x250x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+                    <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '270x270x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
                 </span>
             </a>
             <div class="news-info col-sm-7">
