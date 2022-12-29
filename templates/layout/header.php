@@ -21,9 +21,9 @@
                 </div>
                 <div class="header__item">
                     <div class="header__icon">
-                        <img src="assets/images/imgnew/email.png" alt="<?=$setting['name'.$lang]?>">
+                        <img src="assets/images/images/icon-phone.png" alt="<?=$setting['name'.$lang]?>">
                     </div>
-                    <span>Phone:&nbsp;<a class="header__hotline-hot" href="tel:<?=$optsetting['hotline']?>">
+                    <span>Hotline:&nbsp;<a class="header__hotline-hot" href="tel:<?=$optsetting['hotline']?>">
                             <?=$func->formatPhone($optsetting['hotline'])?></a></span>
                 </div>
 

@@ -2,15 +2,26 @@
 	if(!defined('SOURCES')) die("Error");
     
     //Need
+    $slogan = $cache->get("select desc$lang from #_static where type = ? limit 0,1", array('slogan'), 'fetch', 7200);
 
-    $splist = $cache->get("select name$lang, slugvi, slugen,photo, id from #_product_list where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
-    $newsnb = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'), 'result', 7200);
-    $productnb = $cache->get("select *, id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);
-    $videoclip = $cache->get("select name$lang, desc$lang,link_video,photo, id from #_photo where type = ? and find_in_set('hienthi',status)", array('videoclip'), 'result', 7200);
+    $openingtime = $cache->get("select desc$lang from #_static where type = ? limit 0,1", array('opening-time'), 'fetch', 7200);
+    
     $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
+
     $about = $cache->get("select name$lang,desc$lang,photo, content$lang from #_static where type = ? limit 0,1", array('gioi-thieu'), 'fetch', 7200);
-    $socialabout = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('social'), 'result', 7200);
-    $dkimg = $cache->get("select name$lang, photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('image-register'), 'result', 7200);
+    
+    $tieuchi = $cache->get("select name$lang, desc$lang, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('tieu-chi'), 'result', 7200);
+    
+    $congtrinh = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('du-an'), 'result', 7200);
+
+    $congtrinhlist = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('du-an'), 'result', 7200);
+
+    $dichvu = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'), 'result', 7200);
+
+    $baogia = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('bao-gia'), 'result', 7200);
+
+    $newsnb = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'), 'result', 7200);
+    
 
     //Need
     /* SEO */

@@ -30,7 +30,7 @@ $tempLink .= "&p=";
 $pageLink .= $tempLink;
 
 /* Get data */
-$sql = "select * from #_product where type='cong-trinh' $where and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc";
+$sql = "select * from #_news where type='du-an' $where and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc";
 $sqlCache = $sql . " limit $start, $pagingAjax->perpage";
 $items = $cache->get($sqlCache, $params, 'result', 7200);
 
@@ -41,18 +41,17 @@ $countItems = count($cache->get($sql, $params, 'result', 7200));
 $pagingItems = $pagingAjax->getAllPageLinks($countItems, $pageLink, $eShow);
 ?>
 <?php if ($countItems) { ?>
-<div class="grid-page w-clear parent">
+<div class="grid-page grid_3 paddingg_15 w-clear parent">
     <?php foreach($items as $k => $v) { ?>
-    <div class="congtrinh">
-        <a class="box-congtrinh text-decoration-none" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
-            <p class="pic-congtrinh scale-img effect10">
-                <?=$func->getImage(['sizes' => '377x400x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
-            </p>
-            <div class="name-congtrinh">
+    <div class="congtrinh__item">
+        <a class="congtrinh__card text-decoration-none" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
+            <div class="congtrinh__img scale-img effect10">
+                <?=$func->getImage(['sizes' => '380x255x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+            </div>
+            <div class="congtrinh__name">
                 <span class="cut_string1">
                     <?=$v['name'.$lang]?>
                 </span>
-
             </div>
         </a>
     </div>

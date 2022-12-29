@@ -118,10 +118,24 @@ NN_FRAMEWORK.Wows = function () {
 
 /* Pagings */
 /* Paging ajax Cong trinh*/
+// NN_FRAMEWORK.loadPagingCongtrinh = function () {
+//   if (isExist($(".paging-congtrinh"))) {
+//     loadPaging("api/congtrinh.php?perpage=6", ".paging-congtrinh", 0);
+//   }
+
+// };
 NN_FRAMEWORK.loadPagingCongtrinh = function () {
-  if (isExist($(".paging-congtrinh"))) {
-    loadPaging("api/congtrinh.php?perpage=6", ".paging-congtrinh", 0);
-  }
+  loadPaging("api/congtrinh.php?perpage=3", ".paging-congtrinh-list", 0);
+  $(".title-congtrinh-list .a-title-congtrinh").click(function () {
+    $(".title-congtrinh-list .a-title-congtrinh").removeClass("active");
+    $(this).addClass("active");
+    var _list = $(this).data("list");
+    loadPaging(
+      "api/congtrinh.php?idList=" + _list + "&perpage=3",
+      ".paging-congtrinh-list",
+      0
+    );
+  });
 };
 
 /* Paging ajax*/
@@ -130,6 +144,7 @@ NN_FRAMEWORK.loadPaging = function () {
     loadPaging("api/product.php?perpage=8", ".paging-product", 0);
   }
 };
+
 
 /* Paging ajax list*/
 NN_FRAMEWORK.loadPagingList = function () {
@@ -313,28 +328,20 @@ NN_FRAMEWORK.Videos = function () {
 };
 /* Slick */
 NN_FRAMEWORK.SlickBlog = function () {
-  $(".slider-for").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: ".slider-nav",
-  });
-  $(".slider-nav").slick({
+  $(".blog-right").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     vertical: true,
-    asNavFor: ".slider-for",
-    loop: true,
+    loop: true
   });
 };
 
 /* Slick */
 NN_FRAMEWORK.SlickTieuchi = function () {
   $(".slick-tieuchi").slick({
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1000,

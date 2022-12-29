@@ -38,7 +38,7 @@ $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 /* Dự án */
 $nametype = "du-an";
 $config['news'][$nametype]['title_main'] = "Dự án";
-$config['news'][$nametype]['check'] = array("hienthi" => "Hiển thị");
+$config['news'][$nametype]['check'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
 $config['news'][$nametype]['dropdown'] = true;
 $config['news'][$nametype]['list'] = true;
 $config['news'][$nametype]['view'] = true;
@@ -56,8 +56,6 @@ $config['news'][$nametype]['thumb'] = '380x255x1';
 $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 /* Tin tức (List) */
 $config['news'][$nametype]['title_main_list'] = "Dự án cấp 1";
-$config['news'][$nametype]['images_list'] = true;
-$config['news'][$nametype]['show_images_list'] = true;
 $config['news'][$nametype]['slug_list'] = true;
 $config['news'][$nametype]['check_list'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
 

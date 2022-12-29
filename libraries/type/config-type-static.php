@@ -19,4 +19,17 @@
     $config['static'][$nametype]['width'] = 550;
     $config['static'][$nametype]['height'] = 330;
     $config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
+
+    /* Slogan */
+    $nametype = "slogan";
+    $config['static'][$nametype]['title_main'] = "Slogan";
+    $config['static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
+    $config['static'][$nametype]['desc'] = true;
+
+
+    /* Giờ mở cửa */
+    $nametype = "opening-time";
+    $config['static'][$nametype]['title_main'] = "Giờ mở cửa";
+    $config['static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
+    $config['static'][$nametype]['desc'] = true;
 ?>
